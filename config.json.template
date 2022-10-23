@@ -1,0 +1,18 @@
+{
+    "skip_check": true,
+    "qbittorrent": {
+        "host": "127.0.0.1",
+        "port": 8080,
+        "username": "admin",
+        "password": "adminadmin"
+    },
+    "transmission": {
+        "protocol": "http",
+        "host": "127.0.0.1",
+        "port": 9091,
+        "path": "/transmission/",
+        "username": "",
+        "password": "",
+        "torrent_dir": "~/.config/transmission-daemon/torrents"
+    }
+}
