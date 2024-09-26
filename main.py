@@ -85,7 +85,10 @@ def main():
             is_paused=True
         )
 
-        tr_torrent_tracker_domain = urlparse(tr_torrent.trackers[0]['announce']).netloc
+        try:
+            tr_torrent_tracker_domain = urlparse(tr_torrent.trackers[0]['announce']).netloc
+        except IndexError:
+            tr_torrent_tracker_domain = 'None'
         print(f"Torrent: {tr_torrent.name} Path: {tr_torrent.download_dir} Tracker: {tr_torrent_tracker_domain}")
 
         time.sleep(1)
